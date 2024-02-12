@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Start interview when the user says start
+    steps:
+      - intent: start_interview
+      - action: utter_start_interview
+
+  - rule: Ask Java question when the user introduces themselves
+    steps:
+      - intent: introduction
+      - action: utter_ask_java_question
